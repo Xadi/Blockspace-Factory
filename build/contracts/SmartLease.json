@@ -1,0 +1,759 @@
+{
+  "contractName": "SmartLease",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "leasesOwners",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_landlord",
+          "type": "address"
+        },
+        {
+          "name": "_tenant",
+          "type": "address"
+        },
+        {
+          "name": "_litigator",
+          "type": "address"
+        },
+        {
+          "name": "_physicalAddress",
+          "type": "string"
+        },
+        {
+          "name": "_hashId",
+          "type": "string"
+        }
+      ],
+      "name": "createLease",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b50610289806100206000396000f30060806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680638d0b73e014610051578063d41b84e1146100de575b600080fd5b34801561005d57600080fd5b5061009c600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610205565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100ea57600080fd5b506101eb600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290505050610252565b604051808215151515815260200191505060405180910390f35b60006020528160005260406000208181548110151561022057fe5b906000526020600020016000915091509054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000959450505050505600a165627a7a72305820159126d6e6d12b88547e0d27995c45f4ff8d74e841ea45082b4182578837b6f00029",
+  "deployedBytecode": "0x60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680638d0b73e014610051578063d41b84e1146100de575b600080fd5b34801561005d57600080fd5b5061009c600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610205565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100ea57600080fd5b506101eb600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290505050610252565b604051808215151515815260200191505060405180910390f35b60006020528160005260406000208181548110151561022057fe5b906000526020600020016000915091509054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000959450505050505600a165627a7a72305820159126d6e6d12b88547e0d27995c45f4ff8d74e841ea45082b4182578837b6f00029",
+  "sourceMap": "50:380:5:-;;;130:28;8:9:-1;5:2;;;30:1;27;20:12;5:2;130:28:5;50:380;;;;;;",
+  "deployedSourceMap": "50:380:5:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;76:48;;8:9:-1;5:2;;;30:1;27;20:12;5:2;76:48:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;163:262;;8:9:-1;5:2;;;30:1;27;20:12;5:2;163:262:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;76:48;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;163:262::-;305:4;163:262;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.2;\r\nimport \"./Lease.sol\";\r\n\r\ncontract SmartLease {\r\n\r\n\tmapping (address => Lease[]) public leasesOwners;\r\n\r\n\tconstructor() public {\r\n\r\n\t}\r\n\r\n\tfunction createLease(address _landlord,  address _tenant, address _litigator, string _physicalAddress, string _hashId) \r\n\t\tpublic \r\n\t\treturns(bool) \r\n\t\t{\r\n\t\t\t//leasesOwners[msg.sender] = new Lease(_landlord,  _tenant, _litigator, _physicalAddress, _hashId);\r\n\t\t}\r\n\r\n}\r\n",
+  "sourcePath": "C:\\Users\\adri1\\Desktop\\Perso\\Blockspace\\Blockspace-Tenancy\\contracts\\SmartLease.sol",
+  "ast": {
+    "absolutePath": "/C/Users/adri1/Desktop/Perso/Blockspace/Blockspace-Tenancy/contracts/SmartLease.sol",
+    "exportedSymbols": {
+      "SmartLease": [
+        569
+      ]
+    },
+    "id": 570,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 542,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:5"
+      },
+      {
+        "absolutePath": "/C/Users/adri1/Desktop/Perso/Blockspace/Blockspace-Tenancy/contracts/Lease.sol",
+        "file": "./Lease.sol",
+        "id": 543,
+        "nodeType": "ImportDirective",
+        "scope": 570,
+        "sourceUnit": 147,
+        "src": "25:21:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 569,
+        "linearizedBaseContracts": [
+          569
+        ],
+        "name": "SmartLease",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 548,
+            "name": "leasesOwners",
+            "nodeType": "VariableDeclaration",
+            "scope": 569,
+            "src": "76:48:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_Lease_$146_$dyn_storage_$",
+              "typeString": "mapping(address => contract Lease[])"
+            },
+            "typeName": {
+              "id": 547,
+              "keyType": {
+                "id": 544,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "85:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "76:28:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_Lease_$146_$dyn_storage_$",
+                "typeString": "mapping(address => contract Lease[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "contractScope": null,
+                  "id": 545,
+                  "name": "Lease",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 146,
+                  "src": "96:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Lease_$146",
+                    "typeString": "contract Lease"
+                  }
+                },
+                "id": 546,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "96:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_contract$_Lease_$146_$dyn_storage_ptr",
+                  "typeString": "contract Lease[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 551,
+              "nodeType": "Block",
+              "src": "151:7:5",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 552,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 549,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "141:2:5"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 550,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "151:0:5"
+            },
+            "scope": 569,
+            "src": "130:28:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 567,
+              "nodeType": "Block",
+              "src": "315:110:5",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 568,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "createLease",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 563,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 554,
+                  "name": "_landlord",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 568,
+                  "src": "184:17:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 553,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "184:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 556,
+                  "name": "_tenant",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 568,
+                  "src": "204:15:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 555,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "204:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 558,
+                  "name": "_litigator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 568,
+                  "src": "221:18:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 557,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "221:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 560,
+                  "name": "_physicalAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 568,
+                  "src": "241:23:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 559,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "241:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 562,
+                  "name": "_hashId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 568,
+                  "src": "266:14:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 561,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "266:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "183:98:5"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 566,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 565,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 568,
+                  "src": "305:4:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 564,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "305:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "304:6:5"
+            },
+            "scope": 569,
+            "src": "163:262:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 570,
+        "src": "50:380:5"
+      }
+    ],
+    "src": "0:432:5"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/adri1/Desktop/Perso/Blockspace/Blockspace-Tenancy/contracts/SmartLease.sol",
+    "exportedSymbols": {
+      "SmartLease": [
+        569
+      ]
+    },
+    "id": 570,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 542,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:5"
+      },
+      {
+        "absolutePath": "/C/Users/adri1/Desktop/Perso/Blockspace/Blockspace-Tenancy/contracts/Lease.sol",
+        "file": "./Lease.sol",
+        "id": 543,
+        "nodeType": "ImportDirective",
+        "scope": 570,
+        "sourceUnit": 147,
+        "src": "25:21:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 569,
+        "linearizedBaseContracts": [
+          569
+        ],
+        "name": "SmartLease",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 548,
+            "name": "leasesOwners",
+            "nodeType": "VariableDeclaration",
+            "scope": 569,
+            "src": "76:48:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_Lease_$146_$dyn_storage_$",
+              "typeString": "mapping(address => contract Lease[])"
+            },
+            "typeName": {
+              "id": 547,
+              "keyType": {
+                "id": 544,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "85:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "76:28:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_Lease_$146_$dyn_storage_$",
+                "typeString": "mapping(address => contract Lease[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "contractScope": null,
+                  "id": 545,
+                  "name": "Lease",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 146,
+                  "src": "96:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Lease_$146",
+                    "typeString": "contract Lease"
+                  }
+                },
+                "id": 546,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "96:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_contract$_Lease_$146_$dyn_storage_ptr",
+                  "typeString": "contract Lease[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 551,
+              "nodeType": "Block",
+              "src": "151:7:5",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 552,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 549,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "141:2:5"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 550,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "151:0:5"
+            },
+            "scope": 569,
+            "src": "130:28:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 567,
+              "nodeType": "Block",
+              "src": "315:110:5",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 568,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "createLease",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 563,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 554,
+                  "name": "_landlord",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 568,
+                  "src": "184:17:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 553,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "184:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 556,
+                  "name": "_tenant",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 568,
+                  "src": "204:15:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 555,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "204:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 558,
+                  "name": "_litigator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 568,
+                  "src": "221:18:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 557,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "221:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 560,
+                  "name": "_physicalAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 568,
+                  "src": "241:23:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 559,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "241:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 562,
+                  "name": "_hashId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 568,
+                  "src": "266:14:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 561,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "266:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "183:98:5"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 566,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 565,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 568,
+                  "src": "305:4:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 564,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "305:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "304:6:5"
+            },
+            "scope": 569,
+            "src": "163:262:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 570,
+        "src": "50:380:5"
+      }
+    ],
+    "src": "0:432:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x74272b8755a1600ac1de6f3356f2c0f5332104d4",
+      "transactionHash": "0xc52b10db1791f25df80b6ffa962fb662acb7a87652a0c513d3696dc00609235a"
+    }
+  },
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-08-13T16:15:07.008Z"
+}
